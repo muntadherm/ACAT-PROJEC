@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Facts Section</title>
+    <style>
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+#counter-facts {
+    background-color: #ffffff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#counter-facts .container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#counter-facts h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.counter-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.counter-item {
+    flex: 1 1 calc(25% - 40px);
+    background: #f9f9f9;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.counter-item:hover {
+    transform: scale(1.05);
+}
+
+.counter {
+    font-size: 3em;
+    color: #e67e22;
+}
+
+.counter-item h3 {
+    font-size: 1.5em;
+    color: #555;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .counter-item {
+        flex: 1 1 calc(50% - 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    .counter-item {
+        flex: 1 1 100%;
+    }
+}
+
+
+
+        </style>
+
+</head>
+<body>
+    <section id="counter-facts">
+        <div class="container">
+            <h2>Our Achievements</h2>
+            <div class="counter-container">
+                <div class="counter-item">
+                    <div class="counter" data-target="1500">0</div>
+                    <h3>Projects Completed</h3>
+                </div>
+                <div class="counter-item">
+                    <div class="counter" data-target="1200">0</div>
+                    <h3>Satisfied Clients</h3>
+                </div>
+                <div class="counter-item">
+                    <div class="counter" data-target="300">0</div>
+                    <h3>Awards Won</h3>
+                </div>
+                <div class="counter-item">
+                    <div class="counter" data-target="5000">0</div>
+                    <h3>Cups of Coffee</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script >
+document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.counter');
+    const speed = 200; // The lower the number, the faster the count
+
+    counters.forEach(counter => {
+        const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+
+            const increment = target / speed;
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(updateCount, 1);
+            } else {
+                counter.innerText = target;
+            }
+        };
+
+        updateCount();
+    });
+});
+
+
+
+
+
+    </script>
+</body>
+</html>

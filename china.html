@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>VISA APPLCATION</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+
+
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+
+<!-- REQUIRED FOR JQUERY -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- REQUIRED FOR COLLECTING SIGNATURES -->
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
+
+
+
+        <style>
+           Sure, here's the full CSS code with the adjustments made to fit the container size properly:
+
+```css
+#signature {
+    margin-top: 4px;
+    width: 100%;
+    border: 1px solid #617ee0;
+    box-shadow: 0 1px 2px var(--fc-border-color);
+    color: #2a293f;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.signature-body {
+  width: 100%;
+  height: 130px;
+  display: flex;
+  flex: 1;
+  position: relative;
+}
+
+.signature-body canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 130px;
+  border-radius: 4px;
+  border-bottom: 1px solid var(--fc-border-color);
+}
+
+.signature-controls {
+  display: flex;
+  margin-top: 12px;
+  gap: 12px;
+}
+
+.signature-controls button {
+  height: 28px;
+  font-size: 12px;
+  font-weight: 400;
+  border-radius: 6px;
+  background: #737272;
+  color: var(--fc-normal-text-color);
+  box-shadow: 0px 0px 0px 1px rgba(18, 55, 105, 0.08), 0px 1px 2px 0px rgba(164, 172, 185, 0.24);
+}
+
+.signature-controls button:hover,
+.signature-controls button:focus,
+.signature-controls button:active {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(193, 199, 208, 0.08) 100%), #FFF;
+  box-shadow: 0px 0px 0px 1px rgba(18, 55, 105, 0.08), 0px 1px 2px 0px rgba(164, 172, 185, 0.24), 0px 3px 6px 0px rgba(164, 172, 185, 0.24);
+}
+
+.container {
+  text-align: center;
+}
+
+.drop-zone {
+  border: 2px dashed #8c8c8c;
+  padding: 20px;
+  cursor: pointer;
+  background-color45px;
+}
+
+.text {
+  font-size: 18px;
+  color: #888;
+}
+
+.image-preview {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.image-preview img {
+  max-width: 200px;
+  max-height: 200px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
+
+.formcarry-container {
+  box-sizing: border-box;
+  margin: 40px auto 0 auto;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.01em;
+
+  width: 100%; /* Adjusted width to 100% */
+
+  /* NORMAL */
+  --fc-border-color: #ECEFF9;
+  --fc-normal-text-color: #0E0B3D;
+  --fc-normal-placeholder-color: #B3B8D0;
+
+  /* PRIMARY COLOR | HSL FORMAT*/
+  --fc-primary-color-hue: 220;
+  --fc-error-color-hue: 356;
+  --fc-primary-hsl: var(--fc-primary-color-hue), 100%, 54%;
+  --fc-error-hsl: var(--fc-error-color-hue), 100%, 54%;
+
+  /* HOVER */
+  --fc-field-hover-bg-color: #F7F9FC;
+  --fc-border-hover-color: #DDE0EE;
+  --fc-field-hover-text-color: #B3B8D0;
+
+  --fc-border-active-color: #E02454;
+}
+
+.formcarry-container * {
+  box-sizing: border-box;
+}
+
+.formcarry-container label {
+  display: block;
+  cursor: pointer;
+}
+
+.formcarry-container .formcarry-block:not(:first-child) {
+  margin-top: 16px;
+}
+
+/* Fields */
+.formcarry-container input,
+.formcarry-container textarea,
+.formcarry-container select {
+  margin-top: 4px;
+  width: 100%;
+  height: 42px;
+  border: 1px solid var(--fc-border-color);
+  box-shadow: 0 1px 2px var(--fc-border-color);
+  color: var(--fc-normal-text-color);
+  border-radius: 10px;
+  padding: 8px 12px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  transition: 125ms background, 125ms color, 125ms box-shadow;
+}
+
+
+
+
+.first-time-entry {
+
+
+    <!-- HTML !-->
+<button class="button-89" role="button">Button 89</button>
+
+/* CSS */
+.button-89 {
+  --b: 3px;   /* border thickness */
+  --s: .45em; /* size of the corner */
+  --color: #373B44;
+  
+  padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+  color: var(--color);
+  --_p: var(--s);
+  background:
+    conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+  transition: .3s linear, color 0s, background-color 0s;
+  outline: var(--b) solid #0000;
+  outline-offset: .6em;
+  font-size: 16px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-89:hover,
+.button-89:focus-visible{
+  --_p: 0px;
+  outline-color: var(--color);
+  outline-offset: .05em;
+}
+
+.button-89:active {
+  background: var(--color);
+  color: #fff;
+}
+
+
+}
+
+
+
+
+
+
+
+
+.formcarry-container textarea {
+  min-height: 188px;
+  max-width: 100%;
+  padding-top: 12px;
+}
+
+.formcarry-container input::placeholder,
+.formcarry-container textarea::placeholder,
+.formcarry-container select::placeholder {
+  color: var(--fc-normal-placeholder-color);
+}
+
+.formcarry-container input:hover,
+.formcarry-container textarea:hover,
+.formcarry-container select:hover {
+  border-color: var(--fc-border-hover-color);
+  background-color: var(--fc-field-hover-bg-color);
+}
+
+.formcarry-container input:hover::placeholder,
+.formcarry-container textarea:hover::placeholder,
+.formcarry-container select:hover::placeholder {
+  color: var(--fc-field-hover-text-color);
+}
+
+.formcarry-container input:focus,
+.formcarry-container textarea:focus,
+.formcarry-container select:focus {
+  background-color: #e8dfdf;
+  border: 2px solid hsl(var(--fc-primary-hsl));
+  box-shadow: hsla(var(--fc-primary-hsl), 8%) 0px 0px 0px 3px;
+  outline: none;
+}
+
+.formcarry-container input:focus,
+.formcarry-container select:focus {
+  padding: 8px 11px;
+}
+
+.formcarry-container textarea:focus {
+  padding: 11px;
+}
+
+.formcarry-container select {
+  background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.9997 14.5001L8.46387 10.9642L9.64303 9.78589L11.9997 12.1434L14.3564 9.78589L15.5355 10.9642L11.9997 14.5001Z' fill='%236C6F93'/%3E%3C/svg%3E%0A");
+  background-size: 24px 24px;
+  background-position: 98%;
+  background-repeat: no-repeat;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.formcarry-container button {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  height: 40px;
+  line-height: 24px;
+  width: 100%;
+  border: 0;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: #E02454; /* Updated color */
+  color: #ffffff;
+  cursor: pointer;
+  box-shadow: 0 0 0 0 transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 125ms all;
+}
+.formcarry-container button:hover {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), hsla(var(--fc-primary-hsl));
+}
+
+.formcarry-container button:focus {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(231, 101, 101, 0.2)), hsla(var(--fc-primary-hsl));
+  border-inline: 1px solid inline rgba(255, 255, 255, 0.6);
+  box-shadow: 0px 0px 0px 3px rgba(var(--fc-primary-hsl), 12%);
+}
+
+.formcarry-container button:active {
+  background: linear-gradient(0deg, rgba(87, 13, 13, 0.2), rgba(0, 0, 0, 0.2)), hsla(var(--fc-primary-hsl));
+}
+
+.formcarry-container button:disabled {
+  background-color: hsla(var(--fc-primary-hsl), 40%);
+  cursor: not-allowed;
+}
+
+.formcarry-container input:focus:required:invalid,
+.formcarry-container input:focus:invalid,
+.formcarry-container select:focus:required:invalid,
+.formcarry-container select:focus:invalid,
+.formcarry-container textarea:focus:invalid,
+.formcarry-container textarea:focus:required:invalid,
+.formcarry-container .fc-field-error {
+  color: hsl(var(--fc-error-hsl));
+  border-color: hsl(var(--fc-error-hsl));
+  box-shadow: 0px 0px 0px 3px hsla(var(--fc-error-hsl), 12%);
+}
+
+.formcarry-message-block {
+  display: none;
+
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.00) 100%), #070B12;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15), 0px 4px 4px 0px rgba(0, 0, 0, 0.07);
+  border-radius: 10px;
+  padding: 12px 40px 12px 16px;
+
+  gap: 8px;
+  align-items: center;
+
+  position: relative;
+  color: #fff;
+}
+
+.formcarry-message-block.active {
+  display: grid;
+  grid-template-columns: 24px 1fr 24px;
+}
+
+.formcarry-message-block .fc-message-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+
+.formcarry-message-block.fc-error .fc-message-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M11 18H7.94101C7.64391 16.7274 6.30412 15.6857 5.75395 14.9992C4.65645 13.6297 4 11.8915 4 10C4 5.58172 7.58172 2 12 2C16.4183 2 20 5.58172 20 10C20 11.8925 19.3428 13.6315 18.2443 15.0014C17.6944 15.687 16.3558 16.7276 16.059 18H13V13H11V18ZM16 20V21C16 22.1046 15.1046 23 14 23H10C8.89543 23 8 22.1046 8 21V20H16Z' fill='%23F8FAFF'%3E%3C/path%3E%3C/svg%3E");
+  fill: #fff;
+  background-size: cover;
+}
+
+.formcarry-message-block.fc-success .fc-message-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23F8FAFF' d='M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM11.0026 16L18.0737 8.92893L16.6595 7.51472L11.0026 13.1716L8.17421 10.3431L6.75999 11.7574L11.0026 16Z'%3E%3C/path%3E%3C/svg%3E");
+  fill: #fff;
+  background-size: cover;
+}
+
+.fc-message-close {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 10.5858L9.17157 7.75736L7.75736 9.17157L10.5858 12L7.75736 14.8284L9.17157 16.2426L12 13.4142L14.8284 16.2426L16.2426 14.8284L13.4142 12L16.2426 9.17157L14.8284 7.75736L12 10.5858Z' fill='rgba(255,255,255,1)'%3E%3C/path%3E%3C/svg%3E");
+  width: 24
+
+px;
+  height: 24px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+```
+
+
+
+.form-container {
+  width: 40%; /* Set width to 40% */
+  max-width: 200;
+  margin: 10px auto;
+  padding: 20px;
+  background-color: #2f78f6;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+
+
+
+..custom {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+
+
+
+
+Result Skip Results Iframe
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.buttons {
+    margin: 10%;
+    text-align: center;
+}
+
+.btn-hover {
+    width: 200px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c2222;
+    cursor: pointer;
+    margin: 20px;
+    height: 55px;
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+
+    border-radius: 50px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+
+
+.btn-hover:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+     
+
+
+.btn-hover:focus {
+    outline: none;
+}
+
+.btn-hover.color-1 {
+    background-image: linear-gradient(to right, #25aae1, #40e495, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+.btn-hover.color-2 {
+    background-image: linear-gradient(to right, #f5ce62, #ff6232, #fa7199, #e85a19);
+    box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
+.btn-hover.color-3 {
+    background-image: linear-gradient(to right, #667eea, #764ba2, #6B8DD6, #8E37D7);
+    box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+}
+.btn-hover.color-4 {
+    background-image: linear-gradient(to right, #fc6076, #ff9a44, #ef9d43, #e75516);
+    box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
+}
+.btn-hover.color-5 {
+    background-image: linear-gradient(to right, #0ba360, #3cba92, #30dd8a, #2bb673);
+    box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+}
+
+
+            
+          </style>
+
+
+
+
+        
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-secondary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Topbar Start -->
+        <div class="container-fluid bg-primary px-5 d-none d-lg-block">
+            <div class="row gx-0 align-items-center">
+                <div class="col-lg-5 text-center text-lg-start mb-lg-0">
+                    <div class="d-flex">
+                        <a href="#" class="text-muted me-4"><i class="fas fa-envelope text-secondary me-2"></i>Example@gmail.com</a>
+                        <a href="#" class="text-muted me-0"><i class="fas fa-phone-alt text-secondary me-2"></i>+01234567890</a>
+                    </div>
+                </div>
+                <div class="col-lg-3 row-cols-1 text-center mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center" style="height: 45px;">
+                        <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i class="fab fa-twitter fw-normal text-secondary"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i class="fab fa-facebook-f fw-normal text-secondary"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i class="fab fa-linkedin-in fw-normal text-secondary"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-square rounded-circle me-2" href=""><i class="fab fa-instagram fw-normal text-secondary"></i></a>
+                        <a class="btn btn-sm btn-outline-light btn-square rounded-circle" href=""><i class="fab fa-youtube fw-normal text-secondary"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <div class="d-inline-flex align-items-center" style="height: 45px;">
+                        <a href="#" class="text-muted me-2"> Help</a><small> / </small>
+                        <a href="#" class="text-muted mx-2"> Support</a><small> / </small>
+                        <a href="#" class="text-muted ms-2"> Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Topbar End -->
+
+
+
+
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid nav-bar p-0">
+            <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 px-lg-5 py-3 py-lg-0">
+                <a href="" class="navbar-brand p-0">
+                    <h1 class="display-5 text-secondary m-0"><img src="img/ACTA-LOGO.png" class="img-fluid" alt="">TRAVEL</h1>
+                    <!-- <img src="img/logo.png" alt="Logo"> -->
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="fa fa-bars"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+                        <a href="about.html" class="nav-item nav-link">About</a>
+                        <a href="service.html" class="nav-item nav-link">Service</a>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link active" data-bs-toggle="dropdown"><span class="dropdown-toggle">invitation</span></a>
+                            <div class="dropdown-menu m-0">
+                                <a href=china.html" class="dropdown-item">china</a>
+                                <a href="honkong.html" class="dropdown-item">honkong</a>
+                                <a href="SaudiArabia.html" class="dropdown-item">Saudi Arabia</a>
+                                <a href="southkorea.html" class="dropdown-item">south korea</a>
+                                <a href="theworld.html" class="dropdown-item">the rest of the world</a>
+                            </div>
+                        </div>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                    <button class="btn btn-primary btn-md-square border-secondary mb-3 mb-md-3 mb-lg-0 me-3" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-search"></i></button>
+                    <a href="" class="btn btn-primary border-secondary rounded-pill py-2 px-4 px-lg-3 mb-3 mb-md-3 mb-lg-0">Get A Quote</a>
+                </div>
+            </nav>
+        </div>
+
+
+
+
+        
+        <!-- Navbar & Hero End -->
+
+        <!-- Modal Search Start -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h4 class="modal-title text-secondary mb-0" id="exampleModalLabel">Search by keyword</h4>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body d-flex align-items-center">
+                        <div class="input-group w-75 mx-auto d-flex">
+                            <input type="search" class="form-control p-3" placeholder="keywords" aria-describedby="search-icon-1">
+                            <span id="search-icon-1" class="input-group-text p-3"><i class="fa fa-search"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal Search End -->
+
+        <!-- Header Start -->
+        <div class="container-fluid bg-breadcrumb">
+            <div class="container text-center py-5" style="max-width: 900px;">
+                <h3 class="text-white display-3 mb-4 wow fadeInDown" data-wow-delay="0.1s">VISA APPLICAION 
+                    
+                </h1>
+                <ol class="breadcrumb justify-content-center text-white mb-0 wow fadeInDown" data-wow-delay="0.3s">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-white">Home</a></li>
+                    <li class="breadcrumb-item"><a href="#" class="text-white">Pages</a></li>
+                    <li class="breadcrumb-item active text-secondary">VISA APPLCATION</li>
+                </ol>    
+
+
+
+                
+            </div>
+        </div>
+        <!-- Header End -->
+
+        <!-- Features Start -->
+        <div class="container-fluid features overflow-hidden py-5">
+            <div class="container py-5">
+                <div class="section-title text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="sub-style">
+                        <h5 class="sub-title text-primary px-3"></h5>
+                    </div>
+                    <!-- Select dropdown -->
+
+                    <h1 class="display-5 mb-4">  إصدار دعوات الفيزا  للصين </h1>
+                   
+                    <p class="mb-0">خدمة إصدار دعوات الفيزا
+                      هل تخطط للسفر إلى وجهة جديدة وتحتاج إلى دعوة للحصول على تأشيرة؟ لا تقلق، نحن هنا لنسهل عليك هذه العملية.
+                      
+                      خدماتنا تشمل:
+                      إصدار دعوات رسمية للحصول على تأشيرات سياحية أو عمل أو دراسة.
+                      توفير الدعم والمشورة في استكمال الطلبات والمستندات اللازمة.
+                      تخطيط وتنسيق مواعيد السفر والإقامة.
+                      متابعة الطلبات لضمان تجاوز أي تحديات أو متطلبات إضافية.
+                      لماذا تختارنا؟
+                      فريق متخصص ومحترف في مجال إصدار دعوات الفيزا.
+                      خدمة سريعة وفعالة مع مراعاة الاحتياجات الفردية لكل عميل.
+                      أسعار تنافسية وتناسب ميزانيتك.
+                      الالتزام بالمعايير القانونية والإجراءات الرسمية لكل دولة.</p>
+                </div>
+               <div>
+                <button class="btn-hover color-1"><a href="FIRST-TIME.html">دخول اول مرة </a></button>
+                <button class="btn-hover color-2"><a href="s">دخول ثاني مرة </a></button>
+                
+             
+
+                
+               </div>
+               
+               
+              
+
+                <section class="formcarry-container">
+                    
+                      
+
+
+
+
+    
+
+
+
+                        
+                    
+                   
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-md-0">
+                        <span class="text-white"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"></i>actl-travel</a>, All right reserved.</span>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end text-white">
+                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+                        Designed By <a class="border-bottom text-white" href="https://ACTL.GLOBAL">ACT-TECGNOLOGY</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+
+
+
+
+
+
+        <script>
+            const wrapper = document.getElementById("signature");
+            const clearButton = wrapper.querySelector("[data-action=clear]");
+            const changeBackgroundColorButton = wrapper.querySelector("[data-action=change-background-color]");
+            const changeColorButton = wrapper.querySelector("[data-action=change-color]");
+            const changeWidthButton = wrapper.querySelector("[data-action=change-width]");
+            const undoButton = wrapper.querySelector("[data-action=undo]");
+            const canvas = wrapper.querySelector("canvas");
+            const signaturePad = new SignaturePad(canvas, {
+              // It's Necessary to use an opaque color when saving image as JPEG;
+              // this option can be omitted if only saving as PNG or SVG
+              backgroundColor: 'rgb(255, 255, 255)'
+            });
+      
+            // Adjust canvas coordinate space taking into account pixel ratio,
+            // to make it look crisp on mobile devices.
+            // This also causes canvas to be cleared.
+            function resizeCanvas() {
+              // When zoomed out to less than 100%, for some very strange reason,
+              // some browsers report devicePixelRatio as less than 1
+              // and only part of the canvas is cleared then.
+              const ratio =  Math.max(window.devicePixelRatio || 1, 1);
+      
+              // This part causes the canvas to be cleared
+              canvas.width = canvas.offsetWidth * ratio;
+              canvas.height = canvas.offsetHeight * ratio;
+              canvas.getContext("2d").scale(ratio, ratio);
+      
+              // This library does not listen for canvas changes, so after the canvas is automatically
+              // canvas looks empty, because the internal data of this library wasn't cleared. To make sure
+              // that the state of this library is consistent with visual state of the canvas, you
+              // have to clear it manually.
+              //signaturePad.clear();
+              
+              // If you want to keep the drawing on resize instead of clearing it you can reset the data.
+              signaturePad.fromData(signaturePad.toData());
+            }
+      
+            // On mobile devices it might make more sense to listen to orientation change,
+            // rather than window resize events.
+            window.onresize = resizeCanvas;
+            resizeCanvas();
+      
+            clearButton.addEventListener("click", () => {
+              signaturePad.clear();
+            });
+      
+            undoButton.addEventListener("click", () => {
+              const data = signaturePad.toData();
+      
+              if (data) {
+                data.pop(); // remove the last dot or line
+                signaturePad.fromData(data);
+              }
+            });
+      
+            $(function(){
+              $(".formcarryForm").submit(function(e){
+                e.preventDefault();
+                var href = $(this).attr("action");
+      
+                var formData = new FormData(this);
+                formData.append('signature', signaturePad.toDataURL());
+                
+                $.ajax({
+                    type: "POST",
+                    url: href,
+                    data: formData,
+                      dataType: "json",
+                      processData: false,
+                      contentType: false,
+                    success: function(response){
+                      if(response.status == "success"){
+                          alert("We received your submission, thank you!");
+                      }
+                      else if(response.code === 422){
+                        alert("Field validation failed");
+                        $.each(response.errors, function(key) {
+                          $('[name="' + key + '"]').addClass('formcarry-field-error');
+                        });
+                      }
+                      else{
+                        alert("An error occured: " + response.message);
+                      }
+                    },
+                    error: function(jqXHR, textStatus){
+                      const errorObject = jqXHR.responseJSON
+      
+                      alert("Request failed, " + errorObject.title + ": " + errorObject.message);
+                    },
+                    complete: function(){
+                      // This will be fired after request is complete whether it's successful or not.
+                      // Use this block to run some code after request is complete.
+                    }
+                });
+              });
+            });
+      
+            const dropZone = document.getElementById('drop-zone');
+      const imagePreview = document.getElementById('imagePreview');
+      
+      dropZone.addEventListener('dragover', (e) => {
+        e.preventDefault();
+        dropZone.classList.add('drag-over');
+      });
+      
+      dropZone.addEventListener('dragleave', () => {
+        dropZone.classList.remove('drag-over');
+      });
+      
+      dropZone.addEventListener('drop', (e) => {
+        e.preventDefault();
+        dropZone.classList.remove('drag-over');
+        const files = e.dataTransfer.files;
+        if (files.length) {
+          handleFiles(files);
+        }
+      });
+      
+      document.getElementById('fileInput').addEventListener('change', (e) => {
+        handleFiles(e.target.files);
+      });
+      
+      function handleFiles(files) {
+        for (const file of files) {
+          if (file.type.startsWith('image/')) {
+            const reader = new FileReader();
+            reader.onload = () => {
+              const img = new Image();
+              img.src = reader.result;
+              img.classList.add('preview-image');
+              imagePreview.appendChild(img);
+            };
+            reader.readAsDataURL(file);
+          }
+        }
+      }
+      
+      
+      const citySelect = document.getElementById('citySelect');
+        citySelect.addEventListener('change', function() {
+          const selectedCity = citySelect.options[citySelect.selectedIndex].text;
+          alert("You selected: " + selectedCity);
+        });
+      
+
+
+
+
+
+        function mergeCountryCode() {
+    var countryCode = document.getElementById("country-code").value;
+    var phoneNumber = document.getElementById("phone-number").value;
+    var mergedNumber = countryCode + phoneNumber;
+    alert("Merged Number: " + mergedNumber);
+    // Optionally, you can set a hidden input field to store the merged number
+    document.getElementById("merged-number").value = mergedNumber;
+  }
+
+
+
+
+  function redirectToSignUp() {
+    window.location.href = "visa.html";
+}
+
+function redirectToLogin() {
+    window.location.href = "login.html";
+}
+
+
+
+
+
+
+
+
+const apiKey = '60cd06e4bf924a18e61c6313c8d6f1f1'; 
+
+        
+        // Function to fetch weather data from the API
+        async function fetchWeather() {
+            const apiUrl = `https://usebasin.com/f/b67711f466d8
+?apikey=${apiKey}`;
+            
+            try {
+                const response = await fetch(apiUrl);
+                const data = await response.json();
+                
+                // Update HTML with weather information
+                document.getElementById('weather-info').innerText = `Current temperature: ${data.temperature}°C`;
+            } catch (error) {
+                console.error('Error fetching weather data:', error);
+            }
+        }
+
+        // Call the fetchWeather function when the page loads
+        window.onload = fetchWeather;
+
+
+
+
+
+    
+</script>
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    
+ <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    </body>
+
+</html>

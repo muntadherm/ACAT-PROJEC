@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cool Form</title>
+<style>
+    /* Cool styling for the form */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f3e9e9;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    form {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        padding: 40px;
+        width: 400px;
+    }
+    .formcarry-block {
+        margin-bottom: 20px;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    select {
+        width: calc(100% - 22px);
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 5px;
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    select {
+        appearance: none;
+        background-image: url('data:image/svg+xml;utf8,<svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+        background-repeat: no-repeat;
+        background-position-x: 100%;
+        background-position-y: 50%;
+        background-size: 24px;
+    }
+    .frame {
+        border: 2px dashed #d90c0c;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+    button[type="submit"] {
+        background-color: #df1920;
+        color: rgb(237, 221, 221);
+        padding: 12px 20px;
+        border: none;
+        border-radius: 220px;
+        cursor: pointer;
+        font-size: 20px;
+        transition: background-color 0.3s ease;
+    }
+    button[type="submit"]:hover {
+        background-color: #2231d5;
+    }
+</style>
+</head>
+<body>
+
+<form action="submit_form.php" method="post">
+    <div class="formcarry-block">
+        <label for="name">Full Name</label>
+        <input type="text" name="name" id="name" placeholder="Your first and last name" required />
+    </div>
+    <div class="formcarry-block">
+        <label for="email">Your Email Address</label>
+        <input type="email" name="email" id="email" placeholder="Your Email" required>
+    </div>
+    <div class="formcarry-block">
+        <label for="phone_number">Phone Number:</label>
+        <input type="text" name="phone_number" id="phone_number" placeholder="Enter your phone number" required>
+    </div>
+    <div class="formcarry-block">
+        <label for="birthDate">Birth Date:</label><br>
+        <input type="date" name="birthDate" id="birthDate" required><br>
+    </div>
+    <div class="formcarry-block">
+        <label for="citySelect">City:</label><br>
+        <select name="city" id="citySelect" required>
+            <option value="">Select a city</option>
+            <option value="najaf">Najaf</option>
+            <option value="baghdad">Baghdad</option>
+            <option value="erbil">Erbil</option>
+            <option value="karbala">Karbala</option>
+        </select>
+    </div>
+    <div class="formcarry-block">
+        <label for="address">Address</label>
+        <input type="text" name="address" id="address" placeholder="Najaf- south.st" required />
+    </div>
+    <div class="frame">
+        <label for="fileInputPassport">Passport</label>
+        <div class="container">
+            <div class="drop-zone" id="drop-zone-passport">
+                <div class="text">Drag & Drop or Click to Upload</div>
+                <input type="file" name="passport" id="fileInputPassport" multiple required>
+            </div>
+            <div class="image-preview" id="imagePreviewPassport"></div>
+        </div>
+    </div>
+    <div class="frame">
+        <label for="fileInputID">ID</label>
+        <div class="container">
+            <div class="drop-zone" id="drop-zone-id">
+                <div class="text">Drag & Drop or Click to Upload</div>
+                <input type="file" name="id" id="fileInputID" multiple required>
+            </div>
+            <div class="image-preview" id="imagePreviewID"></div>
+        </div>
+    </div>
+    <div class="formcarry-block">
+        <button type="submit">Send</button>
+    </div>
+</form>
+
+</body>
+</html>

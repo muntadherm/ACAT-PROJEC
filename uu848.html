@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Brand Section</title>
+  <style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+#our-brand {
+    background-color: #ffffff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#our-brand .container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#our-brand h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.brand-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.brand-item {
+    width: 30%;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.brand-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.brand-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.brand-item p {
+    font-size: 1em;
+    color: #777;
+}
+
+.brand-item:hover {
+    transform: scale(1.05);
+}
+
+    </style>
+</head>
+<body>
+    <section id="our-brand">
+        <div class="container">
+            <h2>Our Brand</h2>
+            <div class="brand-content">
+                <div class="brand-item">
+                    <img src="brand-image1.jpg" alt="Brand Image 1">
+                    <h3>Brand Value 1</h3>
+                    <p>We are committed to excellence and quality in every product we offer.</p>
+                </div>
+                <div class="brand-item">
+                    <img src="brand-image2.jpg" alt="Brand Image 2">
+                    <h3>Brand Value 2</h3>
+                    <p>Innovation is at the heart of our brand, driving us to create unique solutions.</p>
+                </div>
+                <div class="brand-item">
+                    <img src="brand-image3.jpg" alt="Brand Image 3">
+                    <h3>Brand Value 3</h3>
+                    <p>Sustainability and social responsibility guide our business practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script> 
+    // This script is currently empty, but you can add interactivity here if needed
+document.addEventListener('DOMContentLoaded', () => {
+    // Example: Add interactivity when a brand item is clicked
+    const brandItems = document.querySelectorAll('.brand-item');
+    
+    brandItems.forEach(item => {
+        item.addEventListener('click', () => {
+            alert(`You clicked on: ${item.querySelector('h3').textContent}`);
+        });
+    });
+});
+
+    </script>
+</body>
+</html>

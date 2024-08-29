@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Form</title>
+    <style>
+        .product-form__input {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        .form__label {
+            display: block;
+            margin-bottom: 0.6rem;
+            font-weight: bold;
+            color: #333;
+        }
+        .form__input, .form__textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .form__textarea {
+            height: 100px;
+        }
+        .custom-file-input-wrapper {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+        .custom-file-input {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+        .custom-file-label {
+            display: block;
+            padding: 1rem;
+            border: 2px solid #007bff;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            cursor: pointer;
+            font-size: 1.1rem;
+            font-weight: bold;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .custom-file-label:hover {
+            background-color: #0056b3;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .file-name {
+            margin-top: 0.5rem;
+            font-style: italic;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+<div class="product-form__input">
+    <label class="form__label" for="full-name-input">Full Name</label>
+    <input type="text" class="form__input" form="{{ 'product-form-' | append: section.id }}" name="properties[Full Name]" id="full-name-input" required>
+</div>
+
+<div class="product-form__input">
+    <label class="form__label" for="email-input">Email Address</label>
+    <input type="email" class="form__input" form="{{ 'product-form-' | append: section.id }}" name="properties[Email Address]" id="email-input" required>
+</div>
+
+<div class="product-form__input">
+    <label class="form__label" for="address-input">Address</label>
+    <textarea class="form__textarea" form="{{ 'product-form-' | append: section.id }}" name="properties[Address]" id="address-input" required></textarea>
+</div>
+
+<div class="product-form__input">
+    <label class="form__label" for="phone-input">Phone Number</label>
+    <input type="tel" class="form__input" form="{{ 'product-form-' | append: section.id }}" name="properties[Phone Number]" id="phone-input" pattern="\d{3}-\d{3}-\d{4}" placeholder="123-456-7890" required>
+</div>
+
+<div class="product-form__input">
+    <label class="form__label" for="passport-input">Passport Image</label>
+    <div class="custom-file-input-wrapper">
+        <input type="file" class="custom-file-input" form="{{ 'product-form-' | append: section.id }}" name="properties[Passport Image]" id="passport-input" accept="image/*" aria-label="Upload your passport" required>
+        <span class="custom-file-label">Choose file</span>
+    </div>
+    <span class="file-name" id="passport-file-name"></span>
+</div>
+
+<div class="product-form__input">
+    <label class="form__label" for="self-image-input">Self Image</label>
+    <div class="custom-file-input-wrapper">
+        <input type="file" class="custom-file-input" form="{{ 'product-form-' | append: section.id }}" name="properties[Self Image]" id="self-image-input" accept="image/*" aria-label="Upload your self image with white background" required>
+        <span class="custom-file-label">Choose file</span>
+    </div>
+    <span class="file-name" id="self-image-file-name"></span>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const form = document.querySelector("form[novalidate]");
+        if (form) {
+            form.removeAttribute("novalidate");
+        }
+
+        const passportInput = document.getElementById('passport-input');
+        const passportFileNameSpan = document.getElementById('passport-file-name');
+        const passportFileLabel = passportInput.nextElementSibling;
+
+        passportInput.addEventListener('change', () => {
+            const fileName = passportInput.files.length > 0 ? passportInput.files[0].name : 'No file chosen';
+            passportFileNameSpan.textContent = fileName;
+            passportFileLabel.textContent = fileName ? 'File selected' : 'Choose file';
+        });
+
+        const selfImageInput = document.getElementById('self-image-input');
+        const selfImageFileNameSpan = document.getElementById('self-image-file-name');
+        const selfImageFileLabel = selfImageInput.nextElementSibling;
+
+        selfImageInput.addEventListener('change', () => {
+            const fileName = selfImageInput.files.length > 0 ? selfImageInput.files[0].name : 'No file chosen';
+            selfImageFileNameSpan.textContent = fileName;
+            selfImageFileLabel.textContent = fileName ? 'File selected' : 'Choose file';
+        });
+    });
+</script>
+
+</body>
+</html>
